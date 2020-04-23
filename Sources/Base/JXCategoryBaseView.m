@@ -9,7 +9,7 @@
 #import "JXCategoryBaseView.h"
 #import "JXCategoryFactory.h"
 #import "JXCategoryViewAnimator.h"
-
+#import "JXCategoryBaseFlowLayout.h"
 struct DelegateFlags {
     unsigned int didSelectedItemAtIndexFlag : 1;
     unsigned int didClickSelectedItemAtIndexFlag : 1;
@@ -338,7 +338,7 @@ struct DelegateFlags {
 
 - (void)initializeViews
 {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    JXCategoryBaseFlowLayout *layout = [[JXCategoryBaseFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     _collectionView = [[JXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor clearColor];
